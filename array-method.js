@@ -115,3 +115,24 @@ function reducer(previousValue, currentValue) {
 
 const sum = numbers.reduce(reducer, 0);
 console.log(sum);
+
+const getSum = numbers.reduceRight(reducer, 0);
+console.log(getSum);
+
+const getFlat = food.flat();
+console.log(getFlat);
+
+const foodCart = [
+  ['apple', 'carrot'],
+  ['pear', 'brinjal'],
+  ['banana', 'tomato', 'potato', 'guava'],
+];
+// const resultFoodCart = foodCart
+//   .map((items) => {
+//     return [items[0] + items[1]];
+//   })
+//   .flat();
+const resultFoodCart = foodCart.flatMap((items) => {
+  return [items[0] + items[1]];
+});
+console.log(resultFoodCart);
