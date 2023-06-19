@@ -1,6 +1,7 @@
 // Multiplied nested functions values
 // example console.log(example(1,2),(1,3),(2,4))
 // return 1*1*2 + 2*3*4
+
 console.log('Challenge No. 1');
 // function nestValues(a, b) {
 //   return function (c, d) {
@@ -69,3 +70,23 @@ const count = (data) => {
 console.log(count(first));
 
 console.log('Challenge No. 5');
+
+// Find out EVEN or ODD
+
+// const sum = (number) => {
+//   const item = [...(number + '')];
+//   const result = item.reduce((total, item) => {
+//     return total + Number(item);
+//   }, 0);
+//   return result % 2 === 0 ? 'EVEN' : 'ODD';
+// };
+
+const sum = (numbers) =>
+  [...count(numbers.toString())].reduce((total, items) => {
+    return total + Number(items);
+  }, 0) %
+    2 ===
+  0
+    ? 'EVEN'
+    : 'ODD';
+console.log(sum(754));
